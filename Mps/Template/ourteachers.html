@@ -1,0 +1,70 @@
+{% extends "Base.html" %}
+{% block content %}
+
+<!-------------------------------------Our Teachers------------------------------------>
+<!--
+<div class="container-fluid" style="padding: 2%;width: 100%;margin: 2% 0%;">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="container-fluid">
+          <div class="row">
+            {% for i in Teach %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="align teacher">
+             <img src="/media/{{i.Pic}}" alt="{{i.Name}}" class="teacher-image">
+              <p class="teacher-name align">{{i.Name}}</p>
+                <p class="teacher-designation align">{{i.Des}}</p>
+                <p class="align">{{i.Experience}} Years of Experience</p>
+                    </div>
+            </div>
+
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  <br>
+    <hr>
+</div>
+-->
+
+<div class="container-fluid" style="padding: 2%;width: 100%;margin: 2% 0%;">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="container-fluid">
+          <div class="row">
+            {% for i in Teach %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="align teacher">
+<!--              <table class="table">-->
+<!--                <tr><td style="height: 200px;width: 200px;">-->
+<!--                  <img src="/media/{{i.Pic}}" alt="{{i.Name}}" style="width:100%;height:auto;max-width:300px;"></td></tr>-->
+<!--                <tr><td style="color:tomato;font-size:2.5rem;text-align:center;">{{i.Name}}</td></tr>-->
+<!--                <tr><td style="font-size:1.5rem;text-align:center;">{{i.Des}}</td></tr>-->
+<!--                <tr><td style="text-align:center;">{{i.Experience}} Years of Experience</td></tr>-->
+<!--              </table>-->
+
+
+             <img src="/media/{{i.Pic}}" alt="{{i.Name}}" class="teacher-image">
+              <p class="teacher-name align">{{i.Name}}</p>
+                <p class="teacher-designation align">{{i.Des}}</p>
+                <p class="align">{{i.Experience}} Years of Experience</p>
+                    </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  <br>
+    <hr>
+</div>
+<!-------------------------------------Our Teachers------------------------------------->
+
+
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,48 @@
+{% extends "Base.html" %}
+{% block content %}
+
+<!-------------------------------------SignUp------------------------------------>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-2">
+
+<form  method="post">
+        {% csrf_token %}
+        <div class="form-group">
+        <h1>Signup Here</h1>
+
+        <label for="username">Username</label>
+        <input class="form-control" type="text" placeholder="Username" name="username" id="username">
+        </div>
+        <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="email" placeholder="Email or Phone" name="email" id="email">
+</div>
+        <div class="form-group">
+        <label for="password1">Password</label>
+        <input class="form-control" type="password" placeholder="Password" id="password1" name="password1">
+
+        </div>
+        <div class="form-group">
+        <label for="password2">Confrom Password</label>
+        <input class="form-control" type="password" placeholder="Confrom Password" id="password2" name="password2">
+        </div>
+    <div class="form-group">
+        <label for="phone">Enter Phone Number</label>
+  <input class="form-control" type="tel" id="phone" name="phone" placeholder="0123456789" pattern="[0-9]{10}" required>
+        <br>
+
+    <button type="submit">SignUp</button>
+        </div>
+        <a href="{% url 'login' %}">I already have an account</a>
+    </form>
+        </div>
+    </div>
+</div>
+
+<!-------------------------------------SignUp------------------------------------->
+
+
+{% endblock %}
+
+

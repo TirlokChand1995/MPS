@@ -1,0 +1,113 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/logo.jpg">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/mps.css">
+    <script type="text/javascript" src="/static/bootstrap-3.3.7/docs/assets/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <title>{{Title}}</title>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div class="container">
+    <div class="row" style="padding:0px">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" style="padding-left:10px"> <a href="{% url 'home' %}">
+            <p style="font-size:2.0rem;line-height: 60px;float: left;">
+
+            <img src="/static/logo.png" style="height: 60px;margin:0px 5px;"> MPS KAMAN</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-4 col-xs-12" >
+            <p style="font-size: 2.0rem;line-height: 60px;float:left;"><i class="fa fa-phone-square" aria-hidden="true" ></i> <a href="tel:+919602599148"> +919602599148</a></p>
+
+        </div>
+        <div class="col-lg-2 col-lg-offset-2 col-md-4 col-sm-4 col-xs-12" style="padding: 10px 10px 10px 15px;">
+            <div class="pagination" style="float: left;">
+    <a href="#" style="font-size: 2.5rem;float: right;margin: 0px 10px;color: skyblue;"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+    <a href="#" style="font-size: 2.5rem;float: right;margin: 0px 10px; color: cyan;"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    <a href="#" style="font-size: 2.5rem;float: right;margin: 0px 10px;color: darkmagenta;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <!--                                  Navigation bar Start                     -->
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="70">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}">MPS</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+         <li><a href="{% url 'home' %}">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="{% url 'about' %}" class="dropdown-item">School Information</a></li>
+                                  <li><a href="{% url 'vision' %}" class="dropdown-item">Vision</a></li>
+                                  <li><a href="{% url 'mission' %}" class="dropdown-item">Mission</a></li>
+                                  <li><a href="{% url 'principalmessage' %}" class="dropdown-item">Principal Message</a></li>
+                                    <li><a href="{% url 'directormessage' %}" class="dropdown-item">Director Message</a></li>
+                                  <li><a href="{% url 'infrastructure' %}" class="dropdown-item">Infrastructure</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'ourteachers' %}" class="dropdown-item">Our Teachers</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="{% url 'playschool' %}" class="dropdown-item">Play School - Cutie Pies</a></li>
+                                  <li><a href="{% url 'primaryschool' %}" class="dropdown-item">Primary School</a></li>
+                                  <li><a href="{% url 'secondaryschool' %}" class="dropdown-item">Secondary Education</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Activities
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="{% url 'cocurricular' %}" class="dropdown-item">Co-Curricular Activities</a></li>
+                                  <li><a href="{% url 'sports' %}" class="dropdown-item">Sports</a></li>
+                                  <li><a href="{% url 'visualarts' %}" class="dropdown-item">Visual Arts</a></li>
+                                  <li><a href="{% url 'paintings' %}" class="dropdown-item">Paintings</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'gallery' %}" class="dropdown-item">Gallery</a></li>
+                            <li><a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a></li>
+                            
+        </ul>
+          <ul class="nav navbar-nav navbar-right">
+      <li><a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+    <!--                                  Navigation bar End                     -->
+<div class="container header">
+    <div class="row header1">
+        <div class="col-lg-12">
+            <h1>{{Title}}</h1>
+        </div>
+    </div>
+</div>
